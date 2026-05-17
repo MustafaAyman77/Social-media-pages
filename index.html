@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Mobile-optimized viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+
+    <!-- iOS specific -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#0a0a0f" />
+    <meta name="msapplication-navbutton-color" content="#0a0a0f" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- SEO Meta Tags -->
+    <title>Mustafa Ayman | Creative Developer & Designer</title>
+    <meta name="description" content="Welcome to the personal portfolio of Mustafa Ayman - Creative Developer, Designer, and Digital Innovator based in Egypt." />
+    <meta name="keywords" content="Mustafa Ayman, developer, designer, portfolio, Egypt, creative, web developer" />
+    <meta name="author" content="Mustafa Ayman" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mustafaayman.dev/" />
+    <meta property="og:title" content="Mustafa Ayman | Creative Developer & Designer" />
+    <meta property="og:description" content="Welcome to the personal portfolio of Mustafa Ayman - Creative Developer, Designer, and Digital Innovator." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=630&fit=crop" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://mustafaayman.dev/" />
+    <meta name="twitter:title" content="Mustafa Ayman | Creative Developer & Designer" />
+    <meta name="twitter:description" content="Welcome to the personal portfolio of Mustafa Ayman - Creative Developer, Designer, and Digital Innovator." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=630&fit=crop" />
+
+    <!-- Google Fonts with display=swap for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        -webkit-text-size-adjust: 100%;
+      }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #0a0a0f;
+        color: #ffffff;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overscroll-behavior-y: contain;
+      }
+
+      /* Prevent pull-to-refresh on mobile */
+      body {
+        overscroll-behavior-y: contain;
+      }
+
+      /* Loading state */
+      #root:empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      #root:empty::after {
+        content: '';
+        width: 40px;
+        height: 40px;
+        border: 3px solid rgba(0, 212, 255, 0.3);
+        border-top-color: #00d4ff;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
+      /* Hide tap highlight on mobile */
+      a, button {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      /* Safe area for notched devices */
+      @supports (padding: env(safe-area-inset-bottom)) {
+        body {
+          padding-left: env(safe-area-inset-left);
+          padding-right: env(safe-area-inset-right);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
